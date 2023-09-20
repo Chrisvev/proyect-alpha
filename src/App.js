@@ -1,13 +1,17 @@
 
 import './App.css';
-import Main from './components/main';
+
+import FormLogin from './components/FormLogin';
 
 function App() {
+
+
   return (
-    <div className="App">
-      <Main />
+    <div className="App-container">
+   <FormLogin />
 
     </div>
+
   );
 }
 

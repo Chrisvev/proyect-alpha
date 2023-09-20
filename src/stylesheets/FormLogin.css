@@ -6,7 +6,7 @@
   height: 300px;
   align-items: center;
   border-radius: 25px;
-  background-image: linear-gradient(-45deg, #FFC796 0%, #FF6B95 100%);
+  background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
   background-blend-mode: multiply, multiply;
   box-shadow: 1px 1px 3px -2px rgba(0, 0, 0, 1);
   -webkit-border-radius: 25px;
@@ -143,17 +143,20 @@ color: white;
 }
 
 .button-submit{
+  display: flex;
+  justify-content: center;
+  align-items: center;
     box-shadow: 1px 1px 3px -2px rgba(0, 0, 0, 1);
     border-radius: 25px;
     border: none;
     height: 40%;
     width: 40%;
+    font-size: 14px;
     transition: background-color 0.1s ease-in-out;
     -webkit-border-radius: 25px;
     -moz-border-radius: 25px;
     -ms-border-radius: 25px;
     -o-border-radius: 25px;
-    -webkit-animation: background-color 0.2s ease-in-out;
     -webkit-transition: background-color 0.1s ease-in-out;
     -moz-transition: background-color 0.1s ease-in-out;
     -ms-transition: background-color 0.1s ease-in-out;
@@ -161,7 +164,16 @@ color: white;
 }
 .button-submit:hover{
     cursor: pointer;
-    background-color: darkgrey;
+    background-color: rgb(228, 227, 227);
+}
+.button-submit:active{
+  transition: ease-in-out 0.1s;
+  transform: translateY(2px);
+  box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0);
+  -webkit-transition: ease-in-out 0.1s;
+  -moz-transition: ease-in-out 0.1s;
+  -ms-transition: ease-in-out 0.1s;
+  -o-transition: ease-in-out 0.1s;
 }
 
 .container-missing-pass{

@@ -1,19 +1,25 @@
 import React from "react";
 import '../stylesheets/FormLogin.css';
+import { useState, useRef } from "react";
 
 function FormLogin(){
+    const formRef = useRef(null);
 
     const handleSubmit=(e)=>{
         e.preventdefault();
 
     }
 
+    const closeForm = () => {
+        formRef.current.reset();
+      };
+
     
 
     return(
         <div className="container-form-login">
 
-            <form className="form-login" action="POST" onSubmit={handleSubmit}>
+            <form className="form-login" ref={formRef} method="GET" onSubmit={handleSubmit} action="">
                 <div className="container-legend-username">
                 <label for="username" className="username">Username</label>
                 </div>
@@ -34,7 +40,7 @@ function FormLogin(){
                 </div>
 
                 <div className="container-button">
-                    <button type="submit" className="button-submit">Login</button>
+                    <div className="button-submit">Login</div>
                <div className="container-missing-pass">
                 <span className="missing-text">¿Has olvidado tu contraseña?</span>
                </div>
