@@ -1,0 +1,141 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.container-main {
+    background-color: red;
+    height: 1024px; /* Esto parece ser una altura temporal */
+}
+
+.principal-web {
+    display: flex;
+    flex-direction: column;
+}
+
+nav {
+    position: fixed;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-image: url('https://media-s3-us-east-1.ceros.com/hotwirepr/images/2020/11/30/3ec0e7336b9168ae6f9897f70e345bd1/fondo.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    box-shadow: 1px 1px 4px black;
+}
+
+#logo img {
+    width: 120px;
+    height: 120px;
+    padding-left: 10px;
+}
+
+#profile ul {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    margin-right: 20px; /* Agregado para separar los elementos */
+}
+
+ul li {
+    padding-right: 3vw;
+}
+
+ul li img {
+    width: 50px;
+    height: 50px;
+    transition: transform 0.3s;
+}
+
+ul li img:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+#elements-profile img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    box-shadow: 0px 4px 1px black;
+}
+
+#elements-profile {
+    display: flex;
+    flex-direction: column;
+    padding: 4vw;
+    text-align: center;
+    background-color: rgb(231, 222, 222);
+    border: 1px solid black;
+    position: fixed;
+    right: 2vw;
+    top: 20vh;
+    box-shadow: 1px 1px 4px black;
+}
+
+#profile-header {
+    padding-bottom: 5vh;
+    width: 100%;
+}
+
+#profile-header h2 {
+    padding-bottom: 3vh;
+    border-bottom: 1px solid black;
+}
+
+#buttons {
+    display: flex;
+    flex-direction: column;
+}
+
+#buttons button {
+    padding: 15px;
+    margin: 5px;
+    color: white;
+    background-image: url("https://media-s3-us-east-1.ceros.com/hotwirepr/images/2020/11/30/3ec0e7336b9168ae6f9897f70e345bd1/fondo.png");
+    cursor: pointer;
+}
+
+#buttons button:hover {
+    background-color: yellow;
+    background-image: none;
+    color: black;
+}
+
+/* Media Query para pantallas más pequeñas */
+@media screen and (max-width: 768px) {
+    #logo img {
+        width: 80px;
+        height: 80px;
+    }
+
+    ul li {
+        padding-right: 10px; /* Ajusta el espaciado para pantallas pequeñas */
+    }
+
+    #profile {
+        width: 100%;
+    }
+
+    #logo {
+        width: 100%;
+    }
+    #elemento-absoluto {
+        position: relative; /* Cambia la posición en pantallas más pequeñas */
+        top: 28vh; /* Ajusta las propiedades según sea necesario */
+        left: auto;
+        /* Otros ajustes necesarios */
+    }
+
+    /* Ajustes para elementos con position: absolute en pantallas pequeñas */
+    @media screen and (max-width: 768px) {
+        #elemento-absoluto {
+            position: relative; /* Cambia la posición en pantallas más pequeñas */
+            top: 25vh; /* Ajusta las propiedades según sea necesario */
+            left: auto;
+            /* Otros ajustes necesarios */
+        }
+    }
+}
