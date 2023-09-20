@@ -8,7 +8,7 @@ function Main (){
     return(
         <div className="container-main">
 
-            <Principal />
+            <FormLogin />
 
         </div>
 

@@ -22,20 +22,18 @@
   flex-direction: column;
   width: 90%;
   height: 90%;
-
 }
 
 .container-legend-username {
   width: 100%;
-color: white;
+  color: white;
   font-size: 12px;
   font-weight: 500;
   letter-spacing: 1px;
-  
 }
 .container-legend-password {
   width: 100%;
-color: white;
+  color: white;
   font-size: 12px;
   font-weight: 500;
   letter-spacing: 1px;
@@ -92,14 +90,13 @@ color: white;
   -ms-transition: background-color 0.2s ease;
   -o-transition: background-color 0.2s ease;
 }
-.container-input-pass:hover{
-    background-color: rgb(228, 227, 227);
+.container-input-pass:hover {
+  background-color: rgb(228, 227, 227);
 }
 
-.container-input-user:hover{
-    background-color: rgb(228, 227, 227);
+.container-input-user:hover {
+  background-color: rgb(228, 227, 227);
 }
-
 
 .container-png-pass {
   display: flex;
@@ -114,59 +111,58 @@ color: white;
   -o-border-radius: 25px;
 }
 .input-password {
-    transition: background-color 0.3s ease;
-    background-color: transparent;
+  transition: background-color 0.3s ease;
+  background-color: transparent;
   outline: none;
   width: 80%;
   border: none;
 }
 
-
-.svg-icon-user{
-    height: 50%;
-    width: 70%;
+.svg-icon-user {
+  height: 50%;
+  width: 70%;
 }
-.svg-icon-pass{
-    background-color: transparent;
-    height: 50%;
-    width: 80%;
-}
-
-.container-button{
-    flex-direction: column;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 30%;
-    width: 90%;
-   
+.svg-icon-pass {
+  background-color: transparent;
+  height: 50%;
+  width: 80%;
 }
 
-.button-submit{
+.container-button {
+  flex-direction: column;
   display: flex;
   justify-content: center;
   align-items: center;
-    box-shadow: 1px 1px 3px -2px rgba(0, 0, 0, 1);
-    border-radius: 25px;
-    border: none;
-    height: 40%;
-    width: 40%;
-    font-size: 14px;
-    transition: background-color 0.1s ease-in-out;
-    -webkit-border-radius: 25px;
-    -moz-border-radius: 25px;
-    -ms-border-radius: 25px;
-    -o-border-radius: 25px;
-    -webkit-transition: background-color 0.1s ease-in-out;
-    -moz-transition: background-color 0.1s ease-in-out;
-    -ms-transition: background-color 0.1s ease-in-out;
-    -o-transition: background-color 0.1s ease-in-out;
+  height: 30%;
+  width: 90%;
 }
-.button-submit:hover{
-    cursor: pointer;
-    background-color: rgb(228, 227, 227);
+
+.button-submit {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 1px 1px 3px -2px rgba(0, 0, 0, 1);
+  border-radius: 25px;
+  border: none;
+  height: 40%;
+  width: 40%;
+  font-size: 14px;
+  transition: background-color 0.1s ease-in-out;
+  -webkit-border-radius: 25px;
+  -moz-border-radius: 25px;
+  -ms-border-radius: 25px;
+  -o-border-radius: 25px;
+  -webkit-transition: background-color 0.1s ease-in-out;
+  -moz-transition: background-color 0.1s ease-in-out;
+  -ms-transition: background-color 0.1s ease-in-out;
+  -o-transition: background-color 0.1s ease-in-out;
 }
-.button-submit:active{
+.button-submit:hover {
+  cursor: pointer;
+  background-color: rgb(228, 227, 227);
+}
+
+.button-submit:active {
   transition: ease-in-out 0.1s;
   transform: translateY(2px);
   box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0);
@@ -176,16 +172,16 @@ color: white;
   -o-transition: ease-in-out 0.1s;
 }
 
-.container-missing-pass{
-    margin-top: 10px;
-    display: flex;
-    flex-direction: row;
-    width: 100%;
+.container-missing-pass {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
 }
-.missing-text{
-    font-size: 12px;
+.missing-text {
+  font-size: 12px;
 }
-.missing-text:hover{
-    cursor: pointer;
-    text-decoration: underline;
+.missing-text:hover {
+  cursor: pointer;
+  text-decoration: underline;
 }
