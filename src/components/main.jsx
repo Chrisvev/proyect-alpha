@@ -1,6 +1,7 @@
 import React from "react";
-import '../stylesheets/main.css';
-import FormLogin from "./FormLogin";
+/*import '../stylesheets/main.css';
+import FormLogin from "./FormLogin";*/
+import Principal from "./principal";
 
 
 function Main (){
@@ -9,7 +10,7 @@ function Main (){
     return(
         <div className="container-main">
 
-            <FormLogin />
+            <Principal />
 
         </div>
 
