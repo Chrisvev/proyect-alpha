@@ -6,7 +6,7 @@
   height: 300px;
   align-items: center;
   border-radius: 25px;
-  background-image: linear-gradient(to top, #e6e9f0 0%, #eef1f5 100%);
+  background-image: linear-gradient(-45deg, #FFC796 0%, #FF6B95 100%);
   background-blend-mode: multiply, multiply;
   box-shadow: 1px 1px 3px -2px rgba(0, 0, 0, 1);
   -webkit-border-radius: 25px;
@@ -22,18 +22,23 @@
   flex-direction: column;
   width: 90%;
   height: 90%;
-  border: 1px solid black;
+
 }
 
 .container-legend-username {
   width: 100%;
-
-  font-size: 13px;
+color: white;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  
 }
 .container-legend-password {
   width: 100%;
-
-  font-size: 13px;
+color: white;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 1px;
 }
 .container-input-user {
   background-color: white;
@@ -134,7 +139,7 @@
     align-items: center;
     height: 30%;
     width: 90%;
-    border: 1px solid black;
+   
 }
 
 .button-submit{
@@ -143,11 +148,22 @@
     border: none;
     height: 40%;
     width: 40%;
+    transition: background-color 0.1s ease-in-out;
     -webkit-border-radius: 25px;
     -moz-border-radius: 25px;
     -ms-border-radius: 25px;
     -o-border-radius: 25px;
+    -webkit-animation: background-color 0.2s ease-in-out;
+    -webkit-transition: background-color 0.1s ease-in-out;
+    -moz-transition: background-color 0.1s ease-in-out;
+    -ms-transition: background-color 0.1s ease-in-out;
+    -o-transition: background-color 0.1s ease-in-out;
 }
+.button-submit:hover{
+    cursor: pointer;
+    background-color: darkgrey;
+}
+
 .container-missing-pass{
     margin-top: 10px;
     display: flex;
@@ -159,4 +175,5 @@
 }
 .missing-text:hover{
     cursor: pointer;
+    text-decoration: underline;
 }
