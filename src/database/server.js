@@ -34,6 +34,7 @@ const conn = mysql.createConnection({
 // ruta de ejemplo
 app.get('/', (req, res) => {
   res.send('Home');
+  alert("dfefer");
 });
 
 
