@@ -4,14 +4,6 @@ const cors = require('cors');
 
 
 
-// const DB_HOST = process.env.DB_HOST|| 'localhost'
-// const DB_USER = process.env.DB_USER || 'localhost'
-// const DB_PASSWORD = process.env.DB_PASSWORD || ''
-// const DB_NAME = process.env.DB_NAME || 'db_alpha'
-// const DB_PORT = process.env.port || 3309
-
-
-
 // Crea una instancia de la aplicación Express
 const app = express();
 app.use(cors());
@@ -33,12 +25,11 @@ const conn = mysql.createConnection({
 
 // ruta de ejemplo
 app.get('/', (req, res) => {
-  res.send('Home');
-  alert("dfefer");
+ 
 });
 
 
-app.get('/ping', async (req, res) => {
+app.get('/login', async (req, res) => {
   conn.query('SELECT * FROM users', (error, results) => {
     if (error) {
     
