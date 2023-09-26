@@ -1,123 +1,221 @@
+:root {
+  --shadow-color: 286deg 36% 72%;
+  --shadow-elevation-low: 0.2px 0.2px 0.2px hsl(var(--shadow-color) / 0.33),
+    0.3px 0.2px 0.3px -2.5px hsl(var(--shadow-color) / 0.22),
+    0.6px 0.6px 0.6px -4.9px hsl(var(--shadow-color) / 0.11);
+  --shadow-elevation-medium: 0.2px 0.2px 0.2px hsl(var(--shadow-color) / 0.28),
+    0.3px 0.2px 0.3px -1.2px hsl(var(--shadow-color) / 0.22),
+    0.6px 0.5px 0.6px -2.5px hsl(var(--shadow-color) / 0.17),
+    1.5px 1.4px 1.6px -3.7px hsl(var(--shadow-color) / 0.11),
+    3.2px 3px 3.3px -4.9px hsl(var(--shadow-color) / 0.06);
+  --shadow-elevation-high: 0.2px 0.2px 0.2px hsl(var(--shadow-color) / 0.26),
+    0.2px 0.2px 0.2px -0.5px hsl(var(--shadow-color) / 0.23),
+    0.3px 0.3px 0.3px -1.1px hsl(var(--shadow-color) / 0.21),
+    0.6px 0.6px 0.6px -1.6px hsl(var(--shadow-color) / 0.18),
+    1.1px 1.1px 1.2px -2.2px hsl(var(--shadow-color) / 0.16),
+    2px 1.9px 2.1px -2.7px hsl(var(--shadow-color) / 0.13),
+    3.3px 3.1px 3.4px -3.3px hsl(var(--shadow-color) / 0.1),
+    5.1px 4.7px 5.3px -3.8px hsl(var(--shadow-color) / 0.08),
+    7.5px 7px 7.8px -4.4px hsl(var(--shadow-color) / 0.05),
+    10.5px 9.8px 10.9px -4.9px hsl(var(--shadow-color) / 0.03);
+}
+
 * {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen-Sans, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
+    Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", Helvetica;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
 .container-home {
-    background-color: white;
-    width: 100%;
-    min-height: 100%;
-    display: flex;
+  overflow-x: hidden;
+  background-image: radial-gradient(73% 147%, #eadfdf 59%, #ece2df 100%),
+    radial-gradient(
+      91% 146%,
+      rgba(255, 255, 255, 0.5) 47%,
+      rgba(0, 0, 0, 0.5) 100%
+    );
+  background-blend-mode: screen;
+  width: 100%;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
 }
-
 
 nav {
-    position: fixed;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    background-image: linear-gradient(to right, #ffecd2 0%, #fcb69f 100%);
-    background-repeat: no-repeat;
-    background-size: cover;
-    width: 100%;
-    height: 90px;
-
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background-image: linear-gradient(to right, #ff758c 0%, #ff7eb3 100%);
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 10vh;
+}
+.svg-logo {
+  width: 120px;
 }
 
-.container-logo{
-    padding: 27px;
-    display: flex;
-    width: 200px;
-    height: 100%;
+.container-logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  width: 200px;
+  height: 100%;
 }
 
-.user-svg{
-    width: 30px;
-    height: 100px;
+.user-svg {
+  width: 30px;
+  height: 50px;
+  transition: 0.1s ease-in-out;
 }
-.msg-svg{
-    width: 30px;
-    height: 100px;
+.user-svg:hover {
+  cursor: pointer;
+  transform: scale(1.3);
 }
-
-#profile ul {
-    display: flex;
-    flex-direction: row;
-    list-style: none;
-    margin-right: 20px; /* Agregado para separar los elementos */
+.msg-svg {
+  transition: 0.1s ease-in-out;
+  width: 30px;
+  height: 50px;
 }
-ul{
-    width: 100%;
-    border: 1px solid black;
-}
-
-ul li {
-    padding-right: 3vw;
+.msg-svg:hover {
+  cursor: pointer;
+  transform: scale(1.3);
 }
 
-ul li img {
-    width: 50px;
-    height: 50px;
-    transition: transform 0.3s;
+#container-profile ul {
+  margin-right: 30px;
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+}
+ul {
+  gap: 35px;
 }
 
-ul li img:hover {
-    transform: scale(1.1);
-    cursor: pointer;
+.container-app {
+  justify-content: flex-end;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  min-height: 90vh;
 }
 
-#elements-profile img {
-    width: 120px;
-    height: 120px;
-    border-radius: 50%;
-    box-shadow: 0px 4px 1px black;
+.photoprofile {
+  width: 100%;
+  border-radius: 100%;
+  -webkit-border-radius: 100%;
+  -moz-border-radius: 100%;
+  -ms-border-radius: 100%;
+  -o-border-radius: 100%;
 }
 
-#elements-profile {
-    display: flex;
-    flex-direction: column;
-    padding: 4vw;
-    text-align: center;
-    background-color: rgb(231, 222, 222);
-    border: 1px solid black;
-    position: fixed;
-    right: 2vw;
-    top: 20vh;
-    box-shadow: 1px 1px 4px black;
+.container-open-profile {
+  display: none;
 }
 
-#profile-header {
-    padding-bottom: 5vh;
-    width: 100%;
+.container-open-profile-visible {
+  background-image: linear-gradient(
+    to top,
+    #dad4ec 0%,
+    #dad4ec 1%,
+    #f3e7e9 100%
+  );
+  display: flex;
+  z-index: 999;
+  flex-direction: column;
+  justify-content: center;
+  height: 500px;
+  max-width: 240px;
+  min-width: 240px;
 }
 
-#profile-header h2 {
-    padding-bottom: 3vh;
-    border-bottom: 1px solid black;
+.container-photo-profile {
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  height: 200px;
+  max-height: 200px;
+}
+.photo-profile {
+  width: 100px;
+  border-radius: 100%;
+  height: 100px;
+  -webkit-border-radius: 100%;
+  -moz-border-radius: 100%;
+  -ms-border-radius: 100%;
+  -o-border-radius: 100%;
+}
+.container-buttons-profile {
+  display: flex;
+  width: 100%;
+  border: 2px solid black;
+  height: 100%;
+}
+.container-others {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  width: 100%;
+  height: 200px;
+  border: 1px solid black;
+}
+.container-others p {
+  padding: 10px;
+}
+.container-buttons {
+  transition: background-color 0.1s ease-in-out;
+  -webkit-transition: background-color 0.1s ease-in-out;
+  -moz-transition: background-color 0.1s ease-in-out;
+  -ms-transition: background-color 0.1s ease-in-out;
+  -o-transition: background-color 0.1s ease-in-out;
+  flex-direction: column;
+  display: flex;
+  width: 90%;
+  justify-content: flex-end;
 }
 
-#buttons {
-    display: flex;
-    flex-direction: column;
+.buttons {
+  border: 1px solid black;
+  display: flex;
+  align-items: center;
+  height: 45px;
+  width: 240px;
+}
+.buttons button {
+  font-weight: 500;
+  background-color: #e0e0e0;
+  box-shadow: var(--shadow-elevation-high);
+  border: none;
+  box-shadow: 0px, 1px, 1px, 1px black;
+  border-top-right-radius: 25px;
+  border-bottom-right-radius: 25px;
+  height: 60%;
+  width: 60%;
+  transition: background-color 0.1s ease-in-out;
+  -webkit-transition: background-color 0.1s ease-in-out;
+  -moz-transition: background-color 0.1s ease-in-out;
+  -ms-transition: background-color 0.1s ease-in-out;
+  -o-transition: background-color 0.1s ease-in-out;
+}
+.containerbuttons-background-color {
+  background-color: #ff758c;
+  cursor: pointer;
 }
 
-#buttons button {
-    padding: 15px;
-    margin: 5px;
-    color: white;
-    background-image: url("https://media-s3-us-east-1.ceros.com/hotwirepr/images/2020/11/30/3ec0e7336b9168ae6f9897f70e345bd1/fondo.png");
-    cursor: pointer;
-}
 
-#buttons button:hover {
-    background-color: yellow;
-    background-image: none;
-    color: black;
-}
-
-/* Media Query para pantallas más pequeñas */
+/* .buttons button:hover {
+  cursor: pointer;
+  background-color: #f7a4a4;
+} */
+/*
+ Media Query para pantallas más pequeñas
 @media screen and (max-width: 768px) {
     #logo img {
         width: 80px;
@@ -125,7 +223,7 @@ ul li img:hover {
     }
 
     ul li {
-        padding-right: 10px; /* Ajusta el espaciado para pantallas pequeñas */
+        padding-right: 10px; /* Ajusta el espaciado para pantallas pequeñas 
     }
 
     #profile {
@@ -136,19 +234,20 @@ ul li img:hover {
         width: 100%;
     }
     #elemento-absoluto {
-        position: relative; /* Cambia la posición en pantallas más pequeñas */
-        top: 28vh; /* Ajusta las propiedades según sea necesario */
+        position: relative; /* Cambia la posición en pantallas más pequeñas 
+        top: 28vh; /* Ajusta las propiedades según sea necesario 
         left: auto;
-        /* Otros ajustes necesarios */
+        /* Otros ajustes necesarios 
     }
 
-    /* Ajustes para elementos con position: absolute en pantallas pequeñas */
+    /* Ajustes para elementos con position: absolute en pantallas pequeñas 
     @media screen and (max-width: 768px) {
         #elemento-absoluto {
-            position: relative; /* Cambia la posición en pantallas más pequeñas */
-            top: 25vh; /* Ajusta las propiedades según sea necesario */
+            position: relative; /* Cambia la posición en pantallas más pequeñas 
+            top: 25vh; /* Ajusta las propiedades según sea necesario 
             left: auto;
-            /* Otros ajustes necesarios */
+            /* Otros ajustes necesarios 
         }
     }
-}
+} 
+*/
