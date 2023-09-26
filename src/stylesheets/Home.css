@@ -45,6 +45,7 @@
 }
 
 nav {
+  z-index: 1;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -67,9 +68,17 @@ nav {
   width: 200px;
   height: 100%;
 }
+.container-user{
+    height: 100%;
+    width: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
 .user-svg {
-  width: 30px;
+  
+  width: 20px;
   height: 50px;
   transition: 0.1s ease-in-out;
 }
@@ -79,7 +88,7 @@ nav {
 }
 .msg-svg {
   transition: 0.1s ease-in-out;
-  width: 30px;
+  width: 20px;
   height: 50px;
 }
 .msg-svg:hover {
@@ -98,11 +107,18 @@ ul {
 }
 
 .container-app {
+  /* background-image: linear-gradient(-225deg, #E3FDF5 0%, #FFE6FA 100%); */
   justify-content: flex-end;
   display: flex;
   flex-direction: row;
   width: 100%;
   min-height: 90vh;
+}
+
+.Pattern-background {
+  z-index: 0;
+  width: 100%;
+  height: 100%;
 }
 
 .photoprofile {
@@ -119,19 +135,17 @@ ul {
 }
 
 .container-open-profile-visible {
-  background-image: linear-gradient(
-    to top,
-    #dad4ec 0%,
-    #dad4ec 1%,
-    #f3e7e9 100%
-  );
+  background-color: #cddcdc;
+  background-image: linear-gradient(-225deg, #e3fdf5 0%, #ffe6fa 100%);
+  background-blend-mode: screen, overlay;
   display: flex;
   z-index: 999;
   flex-direction: column;
   justify-content: center;
   height: 500px;
-  max-width: 240px;
-  min-width: 240px;
+  max-width: 280px;
+  min-width: 280px;
+  box-shadow: var(--shadow-elevation-high);
 }
 
 .container-photo-profile {
@@ -142,6 +156,7 @@ ul {
   flex-direction: row;
   height: 200px;
   max-height: 200px;
+  border-bottom: 1px solid rgb(187, 187, 187);
 }
 .photo-profile {
   width: 100px;
@@ -152,11 +167,18 @@ ul {
   -ms-border-radius: 100%;
   -o-border-radius: 100%;
 }
+.container-others-settings{
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    height: 200px;
+    width: 100%;
+    border-bottom: 1px solid rgb(187, 187, 187);
+}
 .container-buttons-profile {
   display: flex;
   width: 100%;
-  border: 2px solid black;
-  height: 100%;
+  height: 50%;
 }
 .container-others {
   display: flex;
@@ -164,56 +186,62 @@ ul {
   justify-content: center;
   width: 100%;
   height: 200px;
-  border: 1px solid black;
+  border-bottom: 1px solid rgb(187, 187, 187);
 }
 .container-others p {
+   
   padding: 10px;
 }
 .container-buttons {
-  transition: background-color 0.1s ease-in-out;
-  -webkit-transition: background-color 0.1s ease-in-out;
-  -moz-transition: background-color 0.1s ease-in-out;
-  -ms-transition: background-color 0.1s ease-in-out;
-  -o-transition: background-color 0.1s ease-in-out;
+
   flex-direction: column;
   display: flex;
-  width: 90%;
-  justify-content: flex-end;
+  width: 100%;
+  justify-content: space-between;
+
 }
 
 .buttons {
-  border: 1px solid black;
-  display: flex;
-  align-items: center;
-  height: 45px;
-  width: 240px;
-}
-.buttons button {
-  font-weight: 500;
-  background-color: #e0e0e0;
-  box-shadow: var(--shadow-elevation-high);
-  border: none;
-  box-shadow: 0px, 1px, 1px, 1px black;
-  border-top-right-radius: 25px;
-  border-bottom-right-radius: 25px;
-  height: 60%;
-  width: 60%;
+
   transition: background-color 0.1s ease-in-out;
   -webkit-transition: background-color 0.1s ease-in-out;
   -moz-transition: background-color 0.1s ease-in-out;
   -ms-transition: background-color 0.1s ease-in-out;
   -o-transition: background-color 0.1s ease-in-out;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 50px;
+  width: 100%;
+}
+.buttons button {
+  font-weight: 500;
+  background-color: #dadada;
+  box-shadow: var(--shadow-elevation-high);
+  border: none;
+  box-shadow: 0px, 1px, 1px, 1px black;
+  border-radius: 25px;
+  height: 60%;
+  width: 45%;
+  transition: background-color 0.1s ease-in-out;
+  -webkit-transition: background-color 0.1s ease-in-out;
+  -moz-transition: background-color 0.1s ease-in-out;
+  -ms-transition: background-color 0.1s ease-in-out;
+  -o-transition: background-color 0.1s ease-in-out;
+  -webkit-border-radius: 25px;
+  -moz-border-radius: 25px;
+  -ms-border-radius: 25px;
+  -o-border-radius: 25px;
 }
 .containerbuttons-background-color {
-  background-color: #ff758c;
+  background-color: #fcb1d6;
   cursor: pointer;
 }
 
-
-/* .buttons button:hover {
+.buttons button:hover {
   cursor: pointer;
-  background-color: #f7a4a4;
-} */
+}
+
 /*
  Media Query para pantallas más pequeñas
 @media screen and (max-width: 768px) {

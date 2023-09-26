@@ -4,7 +4,6 @@ import { Route, Routes, Navigate } from 'react-router-dom';
 import Login from './components/Login';
 import Home from './components/HomeMain';
 
-
 function App() {
 
 

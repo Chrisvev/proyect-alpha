@@ -1,23 +1,31 @@
 import React, { useState, useEffect, useRef } from "react";
 import "../stylesheets/Home.css";
 import Photo from "../images/photoprofile.png";
+import Pattern  from '../images/patternhome.png';
 
 function HomeMain() {
   const [isVisible, setVisible] = useState(false);
   const containerOpen = useRef(null);
   const containerButton = useRef(null);
 
+  //Funcion pa los cambios de colores con el hover del menu
   const handlehoverButtons = () => {
-    const container = document.getElementById("container-buttons");
-    container.addEventListener("mouseenter", () => {
-      container.classList.add('containerbuttons-background-color');
+    const container = document.querySelectorAll(".buttons");
+  
+    container.forEach((cont)=>{
+
+      cont.addEventListener("mouseenter", () => {
+        cont.classList.add('containerbuttons-background-color');    
+      });
+      
+      cont.addEventListener("mouseleave", ()=>{
+        cont.classList.remove('containerbuttons-background-color');
+
+      });
+      
     });
-
-    container.addEventListener("mouseleave", ()=>{
-      container.classList.remove('containerbuttons-background-color');
-    })
   };
-
+ 
   const handleVisible = () => {
     setVisible(!isVisible);
   };
@@ -61,30 +69,27 @@ function HomeMain() {
           <ul>
             <li>
               <div className="container-user" onClick={handleVisible}>
-                <svg
-                  class="user-svg"
-                  viewBox="0 0 1024 1024"
-                  version="1.1"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path d="M843.282963 870.115556c-8.438519-140.515556-104.296296-257.422222-233.908148-297.14963C687.881481 536.272593 742.4 456.533333 742.4 364.088889c0-127.241481-103.158519-230.4-230.4-230.4S281.6 236.847407 281.6 364.088889c0 92.444444 54.518519 172.183704 133.12 208.877037-129.611852 39.727407-225.46963 156.634074-233.908148 297.14963-0.663704 10.903704 7.964444 20.195556 18.962963 20.195556l0 0c9.955556 0 18.299259-7.774815 18.962963-17.73037C227.745185 718.506667 355.65037 596.385185 512 596.385185s284.254815 122.121481 293.357037 276.195556c0.568889 9.955556 8.912593 17.73037 18.962963 17.73037C835.318519 890.311111 843.946667 881.019259 843.282963 870.115556zM319.525926 364.088889c0-106.287407 86.186667-192.474074 192.474074-192.474074s192.474074 86.186667 192.474074 192.474074c0 106.287407-86.186667 192.474074-192.474074 192.474074S319.525926 470.376296 319.525926 364.088889z" />
-                </svg>
+              <svg className="user-svg" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+    <g>
+        <path fill="none" d="M0 0h24v24H0z"/>
+        <path d="M4 22a8 8 0 1 1 16 0H4zm8-9c-3.315 0-6-2.685-6-6s2.685-6 6-6 6 2.685 6 6-2.685 6-6 6z"/>
+    </g>
+</svg>
               </div>
             </li>
             <li>
-              <svg
-                className="msg-svg"
-                viewBox="0 0 1024 1024"
-                version="1.1"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path d="M996.515019 454.715319c0 55.483662-12.576433 109.289102-37.371142 159.91206-23.822568 48.65821-57.878199 92.302219-101.204983 129.714294-43.11189 37.238113-93.253894 66.443271-149.044548 86.827531-57.601906 21.039175-118.754684 31.702026-181.759647 31.702026-11.307533 0-20.466124-9.15859-20.466124-20.466124 0-11.2973 9.15859-20.466124 20.466124-20.466124 58.205657 0 114.63076-9.82374 167.719886-29.215392 51.114145-18.675338 96.988961-45.373397 136.335085-79.357396 80.20674-69.27783 124.393101-161.129794 124.393101-258.650875 0-97.510848-44.186362-189.373045-124.393101-258.650875-39.346123-33.983999-85.22094-60.682058-136.335085-79.347163-53.089126-19.391652-109.514229-29.225625-167.719886-29.225625s-114.63076 9.833973-167.719886 29.225625c-51.124378 18.665105-96.988961 45.363164-136.335085 79.347163-80.216973 69.27783-124.393101 161.129794-124.393101 258.650875 0 59.024302 15.861246 115.39824 47.133483 167.535691 30.04427 50.101071 73.933873 94.338598 126.930901 127.923508 5.904477 3.755534 9.496282 10.263761 9.506515 17.263176 0 2.691295-0.470721 58.71731-42.395576 132.927475 33.850969-5.761214 66.586534-19.24839 97.715509-40.328497 32.694633-22.144346 51.216475-44.779879 51.40067-45.005007 7.101745-8.769734 19.98517-10.151197 28.765137-3.059686s10.181897 19.934005 3.121084 28.724205c-0.86981 1.084705-21.745257 26.841322-59.065234 52.362578-49.210795 33.666774-104.530728 51.441603-160.065556 51.441603l-1.166569 0c-7.633864-0.040932-14.602579-4.308119-18.102287-11.092639-3.489474-6.774287-2.926656-14.94027 1.463328-21.172205 29.379121-41.679261 43.418882-78.815043 50.019207-102.637612 3.735068-13.46671 5.577019-24.313755 6.487761-31.630395-53.713342-36.102243-98.401124-82.44778-129.724527-134.667096-34.638915-57.765635-52.956096-122.970706-52.956096-188.585099 0-55.483662 12.576433-109.289102 37.360909-159.91206 23.832801-48.647977 57.878199-92.302219 101.204983-129.714294 43.11189-37.227879 93.253894-66.443271 149.044548-86.827531 57.601906-21.039175 118.754684-31.702026 181.76988-31.702026 63.004963 0 124.157741 10.662851 181.759647 31.702026 55.790654 20.384259 105.932658 49.599651 149.044548 86.827531 43.326784 37.412075 77.382415 81.066317 101.204983 129.714294C983.938586 345.426217 996.515019 399.231657 996.515019 454.715319z" />
-              </svg>
+            <svg className="msg-svg" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+    <g>
+        <path fill="none" d="M0 0h24v24H0z"/>
+        <path d="M6.455 19L2 22.5V4a1 1 0 0 1 1-1h18a1 1 0 0 1 1 1v14a1 1 0 0 1-1 1H6.455zM8 10v2h8v-2H8z"/>
+    </g>
+</svg>
             </li>
           </ul>
         </div>
       </nav>
       <div className="container-app">
+      
         <div
           ref={containerOpen}
           className={
@@ -99,20 +104,21 @@ function HomeMain() {
             </div>
           </div>
           <div className="container-others">
-            <p>Informacion sobre el perfil bla bla bla bla</p>
+            <p>Me llamo pablo escobar, soy tranqui 100% pacifista 🕊️, me gustan las cervezas y las rallas de coca 🤟</p>
+          </div>
+          <div className="container-others-settings">
+            <p>Aqui irian otras features</p>
           </div>
           <div className="container-buttons-profile">
-            <div
-              id="container-buttons"
-              className="container-buttons"
-             
-            >
-              <div className="buttons"  ref={containerButton}
-              onMouseEnter={handlehoverButtons}>
-                <button className="button1">Ajustes</button>
+            <div className="container-buttons">
+              <div className="buttons" id="buttons"  ref={containerButton} onMouseEnter={handlehoverButtons}>
+                <button className="buttonsSett1" id="buttonsSett1" >Amigos</button>
               </div>
-              <div className="buttons">
-                <button className="button2">Cerrar sesion</button>
+              <div className="buttons" id="buttons"  ref={containerButton}>
+                <button className="buttonsSett1" id="buttonsSett1" >Ajustes</button>
+              </div>
+              <div className="buttons" id="buttonSett" ref={containerButton}>
+                <button className="buttonsSett2" >Cerrar sesion</button>
               </div>
             </div>
           </div>
