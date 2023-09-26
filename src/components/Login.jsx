@@ -1,6 +1,6 @@
 import React from "react";
-import Principal from "./principal";
 import '../stylesheets/main.css';
+import FormLogin from "./FormLogin";
 
 function Main (){
 

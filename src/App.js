@@ -1,14 +1,22 @@
 
 import './stylesheets/App.css';
+import { Route, Routes, Navigate } from 'react-router-dom';
+import Login from './components/Login';
+import Home from './components/HomeMain';
 
-import FormLogin from './components/FormLogin';
 
 function App() {
 
 
   return (
     <div className="App-container">
-   <FormLogin />
+
+      <Routes>
+        <Route path='/' element={<Navigate to={"/login"} />} />
+        <Route path='/login' element={<Login />} />
+        <Route path='/home' element={<Home />} />
+      </Routes>
+
 
     </div>
 

@@ -4,15 +4,13 @@
     box-sizing: border-box;
 }
 
-.container-main {
-    background-color: red;
-    height: 1024px; /* Esto parece ser una altura temporal */
+.container-home {
+    background-color: white;
+    width: 100%;
+    min-height: 100%;
+    display: flex;
 }
 
-.principal-web {
-    display: flex;
-    flex-direction: column;
-}
 
 nav {
     position: fixed;
@@ -20,17 +18,28 @@ nav {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    background-image: url('https://media-s3-us-east-1.ceros.com/hotwirepr/images/2020/11/30/3ec0e7336b9168ae6f9897f70e345bd1/fondo.png');
+    background-image: linear-gradient(to right, #ffecd2 0%, #fcb69f 100%);
     background-repeat: no-repeat;
     background-size: cover;
     width: 100%;
-    box-shadow: 1px 1px 4px black;
+    height: 90px;
+
 }
 
-#logo img {
-    width: 120px;
-    height: 120px;
-    padding-left: 10px;
+.container-logo{
+    padding: 27px;
+    display: flex;
+    width: 200px;
+    height: 100%;
+}
+
+.user-svg{
+    width: 30px;
+    height: 100px;
+}
+.msg-svg{
+    width: 30px;
+    height: 100px;
 }
 
 #profile ul {
@@ -38,6 +47,10 @@ nav {
     flex-direction: row;
     list-style: none;
     margin-right: 20px; /* Agregado para separar los elementos */
+}
+ul{
+    width: 100%;
+    border: 1px solid black;
 }
 
 ul li {

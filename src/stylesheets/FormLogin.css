@@ -6,7 +6,7 @@
   height: 300px;
   align-items: center;
   border-radius: 25px;
-  background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
+  background-image: linear-gradient(120deg, #e7e7e7 0%, #ebedee 100%);
   background-blend-mode: multiply, multiply;
   box-shadow: 1px 1px 3px -2px rgba(0, 0, 0, 1);
   -webkit-border-radius: 25px;
@@ -74,6 +74,24 @@
   border: none;
 }
 
+
+.blinking{
+   animation: blink 0.9s infinite;
+   -webkit-animation: blink 0.9s infinite;
+}
+
+@keyframes blink {
+  0%{
+    border: 1px solid rgb(218, 86, 86);
+  }
+  50%{
+    border: 1px solid transparent;
+  }
+  100%{
+    border: 1px solid rgb(218, 86, 86);
+  }
+}
+
 .container-input-pass {
   background-color: white;
   display: flex;
@@ -90,6 +108,7 @@
   -ms-transition: background-color 0.2s ease;
   -o-transition: background-color 0.2s ease;
 }
+
 .container-input-pass:hover {
   background-color: rgb(228, 227, 227);
 }
@@ -124,7 +143,7 @@
 }
 .svg-icon-pass {
   background-color: transparent;
-  height: 50%;
+  height: 40%;
   width: 80%;
 }
 
@@ -138,6 +157,7 @@
 }
 
 .button-submit {
+  background-color: white;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -156,7 +176,9 @@
   -moz-transition: background-color 0.1s ease-in-out;
   -ms-transition: background-color 0.1s ease-in-out;
   -o-transition: background-color 0.1s ease-in-out;
+
 }
+
 .button-submit:hover {
   cursor: pointer;
   background-color: rgb(228, 227, 227);
@@ -178,9 +200,13 @@
   flex-direction: row;
   width: 100%;
 }
+
 .missing-text {
+  
   font-size: 12px;
+
 }
+
 .missing-text:hover {
   cursor: pointer;
   text-decoration: underline;
